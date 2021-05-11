@@ -33,9 +33,7 @@ jobs:
           DOCKER_PASSWD: ${{ secrets.DOCKER_PASSWD }}
           TEST: "test test"
         run: |
-          echo $DOCKER_USER
-          echo $TEST
-          docker login -u $DOCKER_USER -p $DOCKER_PASSWD
+          docker login -u $DOCKER_USER --password-stdin $DOCKER_PASSWD
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
