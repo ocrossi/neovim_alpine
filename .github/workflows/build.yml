@@ -53,4 +53,4 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
           repository: rossioc/neovim_alpine
-          tags: latest, ${{ github.run_number }}
+          tags: latest
