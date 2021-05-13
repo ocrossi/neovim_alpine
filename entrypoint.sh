@@ -1,12 +1,6 @@
 #!/usr/bin/bash
 
-VIMCONF="/home/developer/.config/nvim/init.vim" 
-
-#cp home/developer/init.vim $VIMCONF
-
-
-#sudo chmod +w $VIMCONG
-#echo "colorscheme gruvbox" >> $VIMCONF
-#source $VIMCONF
+echo "export FZF_DEFAULT_COMMAND="find -L"" >> /home/developer/.bashrc
+source /home/developer/.bashrc
 
 cd "/home/developer/workspace" && nvim "$@" +"colorscheme gruvbox"

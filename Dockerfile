@@ -12,12 +12,8 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apk update && apk upgrade && \
 		apk add --upgrade neovim git curl editorconfig ctags sudo bash fzf && \
-		#timezone for cmake
-		#apk add tzdata cmake && \
 		apk --no-cache --update add build-base && \
-		#python and YCM dependencies
 		apk add --upgrade nodejs 
-		#python2 py-pip python3 py3-pip
 
 
 
@@ -54,7 +50,6 @@ COPY	entrypoint.sh /usr/local/bin
 
 
 RUN nvim +PlugInstall +qall
-
 
 ENTRYPOINT ["bash", "/usr/local/bin/entrypoint.sh"]
 
