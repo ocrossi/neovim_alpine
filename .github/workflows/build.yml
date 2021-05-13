@@ -33,10 +33,15 @@ jobs:
         with: 
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-      - 
-        name: Build and push
-        uses: docker/build-push-action@v2
-        with:
-          context: ..
-          push: true
-          tags: rossioc/neovim_alpine:latest
+      - name: Push to Docker Hub
+        run: |
+          docker build -t rossioc/neovim_alpine .
+          docker push rossioc/neovim_alpine .
+      # Runs a set of commands using the runners shell
+          #- 
+          #  name: Build and push
+          #  uses: docker/build-push-action@v2
+          #  with:
+          #    context: ..
+          #    push: true
+          #    tags: rossioc/neovim_alpine:latest
