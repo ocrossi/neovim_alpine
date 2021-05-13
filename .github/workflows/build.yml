@@ -35,8 +35,8 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
       - name: Push to Docker Hub
         run: |
-          docker build -t rossioc/neovim_alpine .
-          docker push rossioc/neovim_alpine .
+          docker build -t rossioc/neovim_alpine ../../
+          docker push rossioc/neovim_alpine ../../
       # Runs a set of commands using the runners shell
           #- 
           #  name: Build and push
