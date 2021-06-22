@@ -12,7 +12,7 @@ Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'itchyny/lightline.vim'
-Plug 'prettier/vim-prettier'
+Plug 'prettier/vim-prettier', {'do': 'yarn install' }
 Plug 'gcmt/taboo.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
@@ -31,5 +31,10 @@ nnoremap <C-f> :NERDTreeFocus<cr>
 nnoremap <F2> :NERDTreeToggle<cr>
 "fzf personnal shortcuts
 nnoremap <leader>o :Files<cr>
-nnoremap <leader>ff :Rg<cr>
+"looks for all files in tree
+nnoremap <leader>g :GFiles<cr>
+"looks for files in git repo only
+nnoremap <leader>b :Buffers<cr>
+"looks for files in opened buffers
+nnoremap <leader>f :Rg!<cr>
 "coc.nvim"

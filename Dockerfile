@@ -13,9 +13,9 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apk update && apk upgrade && \
 		apk add --upgrade neovim git curl editorconfig ctags sudo bash fzf && \
 		apk --no-cache --update add build-base && \
-		apk add --upgrade nodejs 
-
-
+		apk add --upgrade nodejs npm && \
+		npm install --global yarn && \
+		apk add --upgrade ripgrep
 
 # Create HOME dir
 RUN mkdir -p "${UHOME}" \

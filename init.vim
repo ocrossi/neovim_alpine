@@ -62,8 +62,5 @@ nnoremap <Leader>h :nohlsearch<CR>
 "NerdTree
 nnoremap <C-f> :NERDTreeFocus<cr>
 nnoremap <F2> :NERDTreeToggle<cr>
-"fzf personnal shortcuts
-nnoremap <leader>o :Files<cr>
-nnoremap <leader>ff :Rg<cr>
 
 source /home/developer/.config/nvim/vim-plug/plugins.vim
